@@ -1,0 +1,2 @@
+# PLATEAU2Vissim
+PLATEAUで公開の3D都市モデルをPTV Vissimにインポート可能なOBJ形式に変換し、Vissimの座標系に自動でインポートするツールです
