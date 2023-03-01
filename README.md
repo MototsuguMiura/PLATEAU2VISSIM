@@ -1,4 +1,4 @@
-# PLATEAU2Vissim
+# PLATEAU2VISSIM
 
 国土交通省が主導するプロジェクト[PLATEAU](https://www.mlit.go.jp/plateau/)により整備、オープンデータ化されている3D都市モデルを、PTV Groupが開発・販売しているミクロ交通シミュレーター[PTV Vissim](https://www.ptvgroup.com/ja/%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/%E8%A3%BD%E5%93%81/ptv-vissim/)にインポート可能なWavefront OBJ (.obj) 形式に自動で変換し、変換された3D都市モデルをVissim座標系の正しい座標にインポートします。  
 
