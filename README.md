@@ -2,9 +2,8 @@
 
 国土交通省が主導するプロジェクト[PLATEAU](https://www.mlit.go.jp/plateau/)により整備、オープンデータ化されている3D都市モデルを、PTV Groupが開発・販売しているミクロ交通シミュレーター[PTV Vissim](https://www.ptvgroup.com/ja/%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/%E8%A3%BD%E5%93%81/ptv-vissim/)にインポート可能なWavefront OBJ (.obj) 形式に自動で変換し、変換された3D都市モデルをVissim座標系の正しい座標にインポートします。  
 
-本ツールは、kasao様の[PlateauCityGmlSharp](https://github.com/ksasao/PlateauCityGmlSharp)というツールを改変し活用しています。   
+本ツールは、ksasao様の[PlateauCityGmlSharp](https://github.com/ksasao/PlateauCityGmlSharp)というツールを改変し活用しています。   
 ※Project PLATEAU の 3D都市モデルで提供されている CityGML形式 (.gml) を Wavefront OBJ (.obj) 形式に変換するツール  
-
 
 ## ファイル構成
 ```txt
@@ -28,7 +27,7 @@ root
 
 ### CityGMLToObj.exe:  
 　Project PLATEAU の 3D都市モデルで提供されている CityGML形式 (.gml) を Wavefront OBJ (.obj) 形式に変換。  
-　kasao様の公開されているツールを改変。　https://github.com/ksasao/PlateauCityGmlSharp  
+　ksasao様の公開されているツールを改変。　https://github.com/ksasao/PlateauCityGmlSharp  
 
 #### オリジナルからの変更点
 - Vissimの座標系に合わせて、XZの符号を反転させて180度回転（Position.cs：95行目～97行目）  
@@ -39,6 +38,8 @@ root
 #### ①対象の地域のCityGMLファイルをダウンロード。  
 [G空間情報センター3D都市モデルポータルサイト](https://www.geospatial.jp/ckan/dataset/plateau)  
 ![1](https://user-images.githubusercontent.com/85535019/222119230-30e04046-968b-41c4-8610-48164664e6f0.png)  
+#### 本ツールは、CityGML（v2）の形式には対応していませんのでご注意ください。
+![image](https://user-images.githubusercontent.com/85535019/234492206-3537fecc-cbd5-4df4-8799-102c2930280c.png)
 <br />
 
 #### ②インポートしたい場所のファイルをImporterフォルダに解凍。  
