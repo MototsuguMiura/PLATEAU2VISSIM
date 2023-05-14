@@ -44,7 +44,7 @@ def Convert_Vissim2WGS(NetX, NetY):
     return latitude, longitude
 
 # Get WGS84 coordinates of refference points in Network
-origin = Convert_Vissim2WGS(RefNetX, RefNetY)
+origin = Convert_Vissim2WGS(0, 0)
 
 # Convert CityGML to OBJ using external converter
 read_files = os.listdir('Importer')
