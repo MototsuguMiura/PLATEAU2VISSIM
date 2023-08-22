@@ -32,14 +32,19 @@ root
 #### オリジナルからの変更点
 - Vissimの座標系に合わせて、XZの符号を反転させて180度回転（Position.cs：95行目～97行目）  
 - 地表に建物を配置できるように標高をLowerCorner.Altitude分オフセット（ModelGenerator.cs：107行目）  
-
+- CityGML(v2)に対応：建物IDの代わりに"gml:id"を取得（CityGMLParser.cs：284～287行目）
 
 ## 使い方  
 #### ①対象の地域のCityGMLファイルをダウンロード。  
 [G空間情報センター3D都市モデルポータルサイト](https://www.geospatial.jp/ckan/dataset/plateau)  
 ![1](https://user-images.githubusercontent.com/85535019/222119230-30e04046-968b-41c4-8610-48164664e6f0.png)  
-#### 本ツールは、CityGML（v2）の形式には対応していませんのでご注意ください。
-![image](https://user-images.githubusercontent.com/85535019/234492206-3537fecc-cbd5-4df4-8799-102c2930280c.png)
+#### 8/22 追記：CityGML（v2）の形式に対応しました！！
+![image](https://github.com/MototsuguMiura/PLATEAU2VISSIM/assets/85535019/91cdbf40-a310-4dcf-9fc9-6e5a26c5bc13)
+![image](https://github.com/MototsuguMiura/PLATEAU2VISSIM/assets/85535019/99f00702-e80e-45e0-8298-5a8be059adce)
+<br />
+左）v1の出力ファイル、右）v2の出力ファイル
+<br />
+※ファイル名がv2から冗長になります
 <br />
 
 #### ②インポートしたい場所のファイルをImporterフォルダに解凍。  
