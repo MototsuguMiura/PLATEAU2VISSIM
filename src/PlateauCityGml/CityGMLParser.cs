@@ -280,7 +280,11 @@ namespace PlateauCityGml
                 building.LowerCorner = lower;
                 building.UpperCorner = upper;
             }
-
+            // CityGML V2から建物IDがなくなったため、IDが空の場合"gml:id"を取得 2023.8.22
+            if (building.Id == "")
+            {
+                building.Id = cd.Attributes["gml:id"].Value;
+            }
             return building;
         }
         private (Position Lower, Position Upper) GetCorner(Surface[] surfaces)
