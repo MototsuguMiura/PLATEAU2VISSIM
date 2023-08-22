@@ -95,7 +95,7 @@ namespace PlateauCityGml
                 //X = -(float)(xp.DistanceTo(origin) * ((Longitude - origin.Longitude) >= 0 ? 1.0 : -1.0)),
                 //Y = (float)(Altitude - origin.Altitude),
                 //Z = (float)(yp.DistanceTo(origin) * ((Latitude - origin.Latitude) >= 0 ? 1.0 : -1.0))
-                // Vissimの座標系に合わせてXZの符号を反転 2023.8.22
+                // ##オリジナルからの変更点## Vissimの座標系に合わせてXZの符号を反転 2023.8.22
                 X = -(float)(xp.DistanceTo(origin) * ((Longitude - origin.Longitude) < 0 ? 1.0 : -1.0)),
                 Y = (float)(Altitude - origin.Altitude),
                 Z = (float)(yp.DistanceTo(origin) * ((Latitude - origin.Latitude) < 0 ? 1.0 : -1.0))

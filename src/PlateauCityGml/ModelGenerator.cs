@@ -105,7 +105,7 @@ namespace PlateauCityGml
             {
                 var v = Vertices[i].Value;
                 //model.Add($"v {v.X} {v.Y} {v.Z}");
-                // 地表に建物を配置できるように標高をオフセット 2023.8.22
+                // ##オリジナルからの変更点## 地表に建物を配置できるように標高をオフセット 2023.8.22
                 model.Add($"v {v.X} {v.Y - LowerCorner.Altitude} {v.Z}");
             }
             // UV を生成
