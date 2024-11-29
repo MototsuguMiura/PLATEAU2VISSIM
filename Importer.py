@@ -44,7 +44,7 @@ def Convert_Vissim2WGS(NetX, NetY):
     return latitude, longitude
 
 # Get WGS84 coordinates of refference points in Network
-origin = Convert_Vissim2WGS(0, 0)
+origin = Convert_Vissim2WGS(RefNetX, RefNetY)
 
 # Convert CityGML to OBJ using external converter
 read_files = os.listdir('Importer')
@@ -60,7 +60,7 @@ for file in read_files:
             base, ext = os.path.splitext(file)
             if ext == '.obj':
                 file_path = os.path.join(read_path, file)
-                Vissim.Net.Static3DModels.AddStatic3DModel(0, file_path, 'POINT(0 0 0)')
+                Vissim.Net.Static3DModels.AddStatic3DModel(0, file_path, f'POINT({RefNetX} {RefNetY} 0)')
 
 ## Resume Vissim GUI
 Vissim.ResumeUpdateGUI()
